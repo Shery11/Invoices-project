@@ -1,0 +1,18 @@
+<h2 class="sub-header">Customers</h2>
+<div class="wrapper" ng-cloak>
+<div class="row" ng-init="getCustomers() ">
+  
+  
+  <div class="col-sm-4" ng-repeat="x in customers">
+    <div class="card card-block">
+      <h3 class="card-title">Name: {{x.name}}</h3>
+      <a href="#/customers/details/{{x._id}}" class="btn btn-primary">Events: {{length}}</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<a href="#/customers/add" type="button" class="btn btn-primary">Add new Customer</a>
+<a href="#/customers" class="btn btn-primary">List All Customers</a>
+

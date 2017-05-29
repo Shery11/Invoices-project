@@ -1,0 +1,24 @@
+<div ng-init="getCustomer()">
+	<div class="clearfix"></div>
+	<h2 class="sub-header"> {{customer.name}} {{customer.number}}</h2>
+	<br>
+  <div> graph area</div>
+
+  <h3>Customer events</h3>
+	<table class="table table-striped" ng-init="getCustomerInvoices()">
+          <thead>
+            <tr>
+              <th>events</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="x in customer_invoices">
+            	  <td><a href="#/customers">{{x._id}}</a></td>
+              	
+            </tr>
+          </tbody>
+        </table>
+   <a href="#/invoices/add" class="btn btn-primary">Add new event</a>
+ </div>
+
+

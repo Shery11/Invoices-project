@@ -1,0 +1,32 @@
+<h2 class="sub-header">Add Event</h2>
+<form ng-submit="addInvoice()">
+   <div class="form-group">
+    <label>Date</label>
+    <input type="button" class="form-control btn btn-default" name="click" ng-model="invoice.date" placeholder="Click">
+  </div>
+  
+  <div class="form-group">
+    <label>Server Type</label>
+    <select class="form-control" ng-model="invoice.ServerType">
+      <option value="WebServer">Web Server</option>
+      <option value="MediaServer">Media Server</option>
+      <option value="DatabaseServer">Database Server</option>
+      <option value="JobFarmServer">JobFarm Server</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Customer ID</label>
+    <select class="form-control" ng-model="invoice.customer_id">
+      <option value="{{myid}}">{{myid}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label> Performance Monitor File </label>
+    <input type="file" class="form-control" name="due" ng-model="invoice.PerformanceMonitorFile" >
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Save</button>
+  <a href="#/customers"><button type="" class="btn btn-danger">Cancel</button></a>
+  
+</form>
